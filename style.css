@@ -1,0 +1,221 @@
+﻿*{
+	padding: 0px;
+	margin: 0px;
+	font-size: 18px;}
+body {
+	width: 100%;
+	min-width: 1366px;
+	background-color: #03230e;
+	font-family: "微软雅黑";}
+#gameInfo {
+	width: 100%;
+	height: 40px;
+	background-color: #65934a;}
+#gameInfo li {
+	color: #fff;
+	line-height: 36px;
+	padding-left: 100px;
+	float: left;
+	list-style: none;}
+#gameInfo li:first-child {
+	padding-left: 8px;
+	cursor: pointer;}
+#gameInfo span {
+	width: 80px;
+	height: 28px;
+	border: 1px solid #ffc;
+	display: inline-block;
+	vertical-align: middle;
+	text-indent: 5px;}
+#gameInfo button {
+	border: none;
+	display: inline-block;
+	height: 40px;
+	background: #ccf;
+	cursor: pointer;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-left: 40px;
+	line-height: 40px;
+	vertical-align: middle;}
+#main {
+	width: 100%;}
+#main div {
+	width: 100px;
+	height: 100px;
+	font-size: 40px;
+	position: absolute;
+	text-align: center;
+	line-height: 130px;
+	vertical-align: bottom;
+	color: #000;}
+#select {
+	width: 400px;
+	text-align: center;
+	position: absolute;
+	z-index: 1000;
+	display: none;}
+#select .title {
+	background-color: #65934a;
+	height: 35px;
+	color: #ffc;
+	line-height: 35px;}
+#select .selectContent{
+	background-color: #ffe;
+	padding: 10px;}
+#select .list {
+	padding-top: 10px;}
+#select select option {
+	font-size: 18px;
+	display: block;
+	width: 100px;}
+#select .list4 button{
+	border: none;
+	background-color: #ba2835;
+	color: #ffc;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-left: 20px;
+	cursor: pointer;}
+#timeShow, #levelShow, #scoreShow {
+	color: #ffc;
+	line-height: 28px;}
+.divPop1{left: 200px;}
+.divPop2{left: 310px;}
+.divPop3{left: 420px;}
+.divPop4{left: 530px;}
+.divPop5{left: 640px;}
+.divPop6{left: 750px;}
+.divPop7{left: 860px;}
+.divPop8{left: 970px;}
+canvas {
+	position: absolute;
+	/* width: 100px;
+	height: 100px; */
+	/* width: 100%;
+	height: 620px; */
+	z-index: 600;
+	top: 40px;
+	left: 0px;}
+/*------游戏开始之前------*/
+#mybg {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 500;
+	opacity: 0.5;
+	filter: alpha(opacity=80);}
+.box {
+	width: 800px;
+	height: 280px;
+	z-index: 3000;
+	display: block;
+	position: absolute;}
+.box .link {
+	width: 205px;
+	height: 205px;
+	float: left;
+	margin: 0px 20px;}
+.link .icon {
+	display: inline-block;
+	width: 100%;
+	height: 120px;
+	transition: 0.2s ease-out;
+	-moz-transition: 0.2s ease-out;
+	-webkit-transition: 0.2s ease-out;
+	-o-transition: 0.2s ease-out;}
+.link-music .icon {
+	background: url(media/images/melody.png) no-repeat center center;}
+.link-play .icon {
+	background: url(media/images/crown.png) no-repeat center center;}
+.link-configre .icon {
+	background: url(media/images/configure.png) no-repeat center center;}
+.link .icon:hover {
+	transform: rotate(360deg) scale(1.2);
+	-ms-transform: rotate(360deg) scale(1.2);
+	-webkit-transform: rotate(360deg) scale(1.2);
+	-moz-transform: rotate(360deg) scale(1.2);
+	-o-transform: rotate(360deg) scale(1.2);}
+.button {
+	display: block;
+	width: 180px;
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	color: #2dcb70;
+	letter-spacing: 4px;
+	font-weight: bolder;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	text-align: center;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;}
+.button:hover {
+	border: 2px solid rgba(255, 255, 255, 1);}
+.button .line {
+	display: block;
+	position: absolute;
+	background: none;}
+.button:hover .line {
+	background: #fff;}
+.button .line-top {
+	height: 2px;
+	width: 0;
+	left: -110%;
+	top: -2px;
+	transition: 0.4s ease-in;
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;}
+.button:hover .line-top {
+	width: 100%;
+	left: -2px;}
+.button .line-bottom {
+	height: 2px;
+	width: 0px;
+	right: -110%;
+	bottom: -2px;
+	transition: 0.4s ease-in;
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;}
+.button:hover .line-bottom {
+	width: 100%;
+	right: -2px;}
+.button .line-right {
+	height: 0px;
+	width: 2px;
+	right: -2px;
+	top: -110%;
+	transition: 0.4s ease-in;
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;}
+.button:hover .line-right {
+	height: 100%;
+	top: -2px;}
+.button .line-left {
+	height: 0px;
+	width: 2px;
+	left: -2px;
+	bottom: -110%;
+	transition: 0.4s ease-in;
+	-webkit-transition: 0.4s ease-in;
+	-moz-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;}
+.button:hover .line-left {
+	height: 100%;
+	bottom: -2px;}
+.box p {
+	color: #ccc;
+	font-size: 16px;
+	top: 210px;
+	margin-left: 40px;
+	position: absolute;}
